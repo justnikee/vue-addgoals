@@ -3,6 +3,8 @@ Vue.createApp({
     return {
       goals: [],
       enteredValue: "",
+      link: 'https://www.google.com/',
+      htmlCode: '<h2>htis is some text </h2>'
     };
   },
   methods: {
@@ -13,6 +15,14 @@ Vue.createApp({
     removeGoals() {
       this.goals.pop(this.enteredValue);
     },
+    outputGoals() {
+      const randomNumber = Math.random()
+      if (randomNumber > 0.5) {
+        return 'l vue'
+      } else {
+        return 'master vue'
+      }
+    }
   },
 }).mount("#app");
 
